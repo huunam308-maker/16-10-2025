@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang quản trị</title>
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <header>
+      <h2>⚙️ Trang quản trị</h2>
+      <button id="logoutBtn">Đăng xuất</button>
+    </header>
+
+    <main>
+      <section class="add-form">
+        <h3>Thêm / Sửa sản phẩm</h3>
+        <form id="productForm">
+          <input type="hidden" id="editIndex" />
+
+          <label>Tên sản phẩm</label>
+          <input type="text" id="name" required />
+
+          <label>Giá</label>
+          <input type="text" id="price" required />
+
+          <label>Mô tả</label>
+          <textarea id="desc" required></textarea>
+
+          <label>Ảnh (URL)</label>
+          <input type="text" id="img" required />
+
+          <button type="submit">Lưu sản phẩm</button>
+        </form>
+      </section>
+
+      <section class="product-list">
+        <h3>Danh sách sản phẩm</h3>
+        <div id="productList" class="cards"></div>
+      </section>
+    </main>
+
+    <script src="admin.js"></script>
+  </body>
+</html>
